@@ -5,7 +5,7 @@ function Header() {
         <section className={styles.header}>
             <a href="/" className={styles.headerTitle} >FAETEC</a>
 
-            <div>
+            <div className={styles.headerItems}>
                 <h4>redes sociais</h4>
                 <nav className={styles.itens}>
                     <div className={styles.tw}>

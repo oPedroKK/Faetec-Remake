@@ -104,3 +104,29 @@
 
     transition: 450ms;
 }
+
+@media(max-width: 500px) {
+    .notice_body {
+        width: 350px;
+        height: 200px;
+
+        padding: 8px;
+    }
+
+    .notice_body > h2 {
+        font-size: 14px;
+        margin-block: 2px;
+    }
+
+    .notice_body p {
+        font-size: 10px;
+
+        width: 180px;
+        height: 120px;
+    }
+
+    .notice_body img {
+        width: 180px;
+        height: 120px;
+    }
+}

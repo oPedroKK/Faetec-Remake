@@ -89,7 +89,7 @@ function Slider() {
                     <img src={prevButtonImage} alt="button_image_back"/>
                 </button>
 
-                <div>
+                <div className={styles.imageSlider}>
                     <img src={announces[prevImage]} id="backImage" className={styles.imageMini} alt="last" />
                     <img src={announces[imageId]} id="mainImage" className={styles.imageMain} alt="main" />
                     <img src={announces[nextImage]} id="nextImage" className={styles.imageMini} alt="next" />

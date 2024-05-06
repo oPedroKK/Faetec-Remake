@@ -1,8 +1,5 @@
 .menu {
-    overflow-block: auto;
-    flex-wrap: nowrap;
-
-    width: 100vw;
+    width: auto;
     height: 65px;
 
     justify-content: center;
@@ -18,7 +15,7 @@
 
 }
 
-a, a:active, a:visited {
+.menu > a, a:active, a:visited {
     color: #ffffff;
     text-align: center;
     text-decoration: none;
@@ -30,4 +27,22 @@ a, a:active, a:visited {
 a:hover {
     color: #62d5e9;
     transition: 350ms;
+}
+
+@media(max-width: 1330px){
+    .menu {
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        padding: 20px;
+
+        justify-content: start;
+
+        font-size: 10px;
+        gap: 20px;
+    }
+
+    a, a:active, a:visited {
+        width: 80px;
+    }
 }
