@@ -33,22 +33,53 @@ function Slider() {
     useEffect(() => {
         const announceUpdate = setInterval(() => {
             setImageId(imageId !== totalImages ? imageId + 1 : 0)
-        }, 5000)
+            document.getElementById('backImage').style.opacity = 1;
+            document.getElementById('mainImage').style.opacity = 1;
+            document.getElementById('nextImage').style.opacity = 1;
+        }, 7000)
+
+        const fadeTimeout = setTimeout(() => {
+            document.getElementById('backImage').style.opacity = 0;
+            document.getElementById('mainImage').style.opacity = 0;
+            document.getElementById('nextImage').style.opacity = 0;
+        }, 6600)
 
         setPrevImage(imageId <= 0 ? totalImages : imageId - 1)
         setNextImage(imageId === totalImages ? 0 : imageId + 1)
 
-        return () => clearInterval(announceUpdate);
+        return () => {
+            clearInterval(announceUpdate); clearTimeout(fadeTimeout);
+        }
     }, [imageId, prevImage, totalImages, nextImage])
 
     const nextButton = () => {
-        setImageId(imageId !== totalImages ? imageId + 1 : 0)
+        document.getElementById('backImage').style.opacity = 0;
+        document.getElementById('mainImage').style.opacity = 0;
+        document.getElementById('nextImage').style.opacity = 0;
+
+        setTimeout(() => {
+            document.getElementById('backImage').style.opacity = 1;
+            document.getElementById('mainImage').style.opacity = 1;
+            document.getElementById('nextImage').style.opacity = 1;
+
+            setImageId(imageId !== totalImages ? imageId + 1 : 0)
+        }, 200)
     }
 
     const prevButton = () => {
-        setImageId(imageId !== 0 ? imageId - 1 : totalImages)
-    }
+        document.getElementById('backImage').style.opacity = 0;
+        document.getElementById('mainImage').style.opacity = 0;
+        document.getElementById('nextImage').style.opacity = 0;
 
+        setTimeout(() => {
+            document.getElementById('backImage').style.opacity = 1;
+            document.getElementById('mainImage').style.opacity = 1;
+            document.getElementById('nextImage').style.opacity = 1;
+
+            setImageId(imageId !== 0 ? imageId - 1 : totalImages)
+        }, 200)
+    }
+    
     return (
         <section className={styles.news}>
             <h1>Novidades</h1>
@@ -59,9 +90,9 @@ function Slider() {
                 </button>
 
                 <div>
-                    <img src={announces[prevImage]} id="otherImage" className={styles.imageMini} alt="last" />
+                    <img src={announces[prevImage]} id="backImage" className={styles.imageMini} alt="last" />
                     <img src={announces[imageId]} id="mainImage" className={styles.imageMain} alt="main" />
-                    <img src={announces[nextImage]} id="otherImage" className={styles.imageMini} alt="next" />
+                    <img src={announces[nextImage]} id="nextImage" className={styles.imageMini} alt="next" />
                 </div>
 
                 <button onClick={nextButton} className={styles.buttonImage}>

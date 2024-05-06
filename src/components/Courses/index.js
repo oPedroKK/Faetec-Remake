@@ -19,13 +19,21 @@ function Courses() {
 
     useEffect(() => {
         const imageInterval = setInterval(() => {
+            document.getElementById('slider').style.opacity = 1;
             setImage(image + 1)
             if(image === 3){
                 setImage(0)
             }
         }, 10000)
 
-        return () => clearInterval(imageInterval)
+        const sliderTransition = setTimeout(() => {
+            document.getElementById('slider').style.opacity = 0;
+        }, 9800)
+
+        return () => {
+            clearInterval(imageInterval);
+            clearTimeout(sliderTransition);
+        }
     }, [image])
 
 
