@@ -1,0 +1,63 @@
+.header {
+    width: 100vw;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+
+    padding-inline: 40px;
+    background: linear-gradient(to right, #0f49a0, #0a90ce);
+    color: #ffffff;
+}
+
+.headerTitle {
+    font-size: 50px;
+    font-weight: bolder;
+    letter-spacing: 8px;
+
+    cursor: pointer;
+    transition: 200ms ease-in;
+}
+
+.headerTitle:hover {
+    color: #5bcbff;
+    transition: 300ms ease-in;
+}
+
+.itens {
+    display: flex;
+    margin-block: 5px;
+    gap: 15px;
+}
+
+.itens > div {
+    display: flex;
+    font-weight: bold;
+    gap: 2px;
+    cursor: pointer;
+
+    transition: 350ms ease-out;
+}
+
+.yt:hover {
+    color: #ff3232;
+    transition: 350ms ease-out;
+}
+
+.fb:hover {
+    color: #4a91fc;
+    transition: 350ms ease-out;
+}
+
+.tw:hover {
+    color: #5bcbff;
+    transition: 350ms ease-out;
+}
+
+.itens > div > i {
+    margin: 2.2px;
+    font-size: 18px;
+    
+}

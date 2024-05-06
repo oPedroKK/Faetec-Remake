@@ -1,0 +1,15 @@
+.footer {
+    width: 100vw;
+    height: 75px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(to bottom, #8eb3c8, #517A8F);
+}
+
+.logo {
+    width: 540px;
+    height: 70px;
+}

@@ -1,0 +1,33 @@
+.menu {
+    overflow-block: auto;
+    flex-wrap: nowrap;
+
+    width: 100vw;
+    height: 65px;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    gap: 2px;
+
+    border-block: 4px solid #ffffff;
+
+    background: linear-gradient(to right, #0e3672, #0daaf3);
+    display: flex;
+
+}
+
+a, a:active, a:visited {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+
+    width: 100px;
+    transition: 350ms;
+}
+
+a:hover {
+    color: #2896df;
+    transition: 350ms;
+}

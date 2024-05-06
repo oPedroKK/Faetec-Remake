@@ -1,0 +1,29 @@
+.courses {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to right, #0f49a0, #0a90ce);
+
+}
+
+.imageCourse {
+    width: 100%;
+    height: 220px;
+
+    box-shadow: 0 0 50px 10px #000000;
+    transition: 350ms ease;
+
+    opacity: 1;
+}
+
+.imageCourseFaded {
+    width: 100%;
+    height: 220px;
+
+    box-shadow: 0 0 50px 10px #000000;
+    transition: 350ms ease;
+
+    opacity: 0;
+}
