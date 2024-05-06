@@ -13,6 +13,8 @@
 }
 
 .headerTitle {
+    color: #ffffff;
+
     font-size: 50px;
     font-weight: bolder;
     letter-spacing: 8px;
@@ -85,6 +87,7 @@
 
     .headerItems {
         font-size: 8px;
+        transform: translatey(10px);
     }
 
     i {
@@ -104,6 +107,7 @@
 
     .headerItems {
         font-size: 8px;
+        transform: translatey(6px);
     }
 
     .headerItems > h4 {
